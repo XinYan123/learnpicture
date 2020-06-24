@@ -1,7 +1,7 @@
 ### 第一步 下载redis到linux
 
 ```linux
-wget http://download.redis.io/releases/redis-2.8.17.tar.gz
+wget http://download.redis.io/releases/redis-4.0.0.tar.gz
 ```
 
 
