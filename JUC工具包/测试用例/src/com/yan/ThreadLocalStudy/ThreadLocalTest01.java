@@ -6,11 +6,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.logging.SimpleFormatter;
 
-/**
- * @description:
- * @author: Frankcrose
- * @createDate: 2020/6/23 9:03
+/*
+场景一的测试用例
  */
+
 public class ThreadLocalTest01 {
     //第一步构建线程池
     public static ExecutorService executorService = Executors.newFixedThreadPool(10);
@@ -43,6 +42,7 @@ public class ThreadLocalTest01 {
 
 class ThreadSafeFormatter {
         public static ThreadLocal<SimpleDateFormat> simpleFormatThreadLocal = new ThreadLocal<SimpleDateFormat>() {
+            //使用ThreadLocal的要重写initialValue()
             @Override
             protected SimpleDateFormat initialValue() {
                 return new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
