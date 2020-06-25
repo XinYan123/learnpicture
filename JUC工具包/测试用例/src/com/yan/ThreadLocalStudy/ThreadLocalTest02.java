@@ -37,7 +37,7 @@ class Service3{
     public void process(){
         User user = UserContextHolder.holder.get();
         System.out.println("s3"+user.name);
-        //调用remove方法，底层将value设置为null，让GC可以回收ThreadLocalMap中的ThreadLocal对象，防止内存泄漏导致的OOM 
+        //调用remove方法，底层将value设置为null，让GC可以回收ThreadLocalMap中的ThreadLocal对象，防止内存泄漏导致的OOM
         UserContextHolder.holder.remove();
     }
 }
